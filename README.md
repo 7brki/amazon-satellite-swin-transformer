@@ -1,1 +1,50 @@
-# amazon-satellite-transformer
+# 🌍 Amazon Rainforest Satellite Imagery Classification using Swin Transformer & Asymmetric Loss (ASL)
+
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/YOUR_HF_USERNAME/amazon-satellite-radar)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
+
+An end-to-end multi-label remote sensing and spatial data science project designed to detect 17 distinct atmospheric and ecological conditions in the Amazon rainforest simultaneously from satellite imagery.
+
+---
+
+## 🚀 Live Demo
+The trained model is deployed on Hugging Face Spaces with a clean Gradio web interface. You can upload any multi-spectral or standard RGB satellite crop to see the model infer in real-time.
+
+👉 **[Live Web Interface Link](https://huggingface.co/spaces/brkiii/amazon-satellite-radar)**
+
+---
+
+## 🛠️ Technical Architecture & Innovations
+
+Unlike traditional CNN approaches (e.g., ResNet, EfficientNet) trained on generic consumer datasets like ImageNet, this architecture leverages state-of-the-art vision mechanisms optimized for complex spatial context:
+
+### 1. Spatial Attention (Swin Transformer V1)
+Utilizes `swin_tiny_patch4_window7_224` as the backbone feature extractor. The shifted window attention mechanism effectively captures long-range spatial correlations and geometric structures (such as linear road patterns, river bends, and blocky agricultural boundaries) that localized convolutional kernels often fail to extract.
+
+### 2. Asymmetric Loss (ASL) for Severe Class Imbalance
+Standard Binary Cross Entropy (BCE) fails heavily on multi-label earth observation data due to the dominance of frequent classes (e.g., `primary`, `clear`) over rare but critical ecological indicators (e.g., `slash_burn`, `blow_down`, `artisinal_mine`). 
+By implementing **Asymmetric Loss (ASL)**, the network dynamically down-weights easy negative spatial samples, forcing the gradient descent to focus entirely on learning high-frequency details of rare classes.
+
+---
+
+## 📈 Performance Metrics
+
+The model achieves highly competitive validation scores within a lightweight 2-epoch training constraint, demonstrating immediate stability and generalizability:
+
+- **Kaggle Leaderboard Prediction (F2-Score):** `0.92299`
+- **Primary/Clear Accuracy:** `>94%`
+
+### Real-world Generalization Test:
+When evaluated on Out-of-Distribution (OOD) textbook remote sensing imagery outside the original Kaggle dataset, the model correctly extracted multi-label features: `clear` (94%), `road` (93%), `habitation` (90%), `primary` (85%), and `agriculture` (82%), confirming robust spatial understanding over mere pixel memorization.
+
+---
+
+## 📁 Repository Structure
+
+```text
+├── app.py                # Gradio application script for deployment
+├── requirements.txt      # Deployment and local dependencies
+├── README.md             # Core project documentation
+└── notebooks/
+    └── amazon_satellite_analysis.ipynb  # End-to-end training and optimization notebook
