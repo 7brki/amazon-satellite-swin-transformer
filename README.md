@@ -73,4 +73,5 @@ When evaluated on Out-of-Distribution (OOD) textbook remote sensing imagery outs
 ---
 
 ## 🔬 Dataset Acknowledgements
-The dataset used is from the **"Planet: Understanding the Amazon from Space"** Kaggle competition. It contains high-resolution satellite imagery chips covering the Amazon basin, manually labeled by remote sensing experts into 17 co-occurring classes spanning atmospheric conditions, land cover, and land use types.
+The dataset used is from the **"Planet: Understanding the Amazon from Space"** Kaggle competition. It contains high-resolution satellite imagery chips covering the Amazon basin, manually labeled by remote sensing experts into 17 co-occurring classes spanning atmospheric conditions, land cover, and land use types
+To run this project, download the pre-trained weights (swin_amazon_beyni.pth) from the release section or the project link
