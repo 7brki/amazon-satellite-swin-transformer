@@ -1,0 +1,18 @@
+# PyTorch Weights (Büyük model ağırlıkları GitHub'a yüklenmez)
+*.pth
+*.pt
+
+# Python Sanal Ortam ve Cache Dosyaları
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Jupyter ve Kaggle Özel Geçici Klasörleri
+.ipynb_checkpoints/
+.virtual_documents/
+__notebook_source__.ipynb
+
+# Sistem Dosyaları
+.DS_Store
+Thumbs.db
