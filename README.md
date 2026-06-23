@@ -1,6 +1,6 @@
 # 🌍 Amazon Rainforest Satellite Imagery Classification using Swin Transformer & Asymmetric Loss (ASL)
 
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/YOUR_HF_USERNAME/amazon-satellite-radar)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/brkiii/amazon-satellite-radar)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
 
@@ -11,7 +11,7 @@ An end-to-end multi-label remote sensing and spatial data science project design
 ## 🚀 Live Demo
 The trained model is deployed on Hugging Face Spaces with a clean Gradio web interface. You can upload any multi-spectral or standard RGB satellite crop to see the model infer in real-time.
 
-👉 **[Live Web Interface Link](https://huggingface.co/spaces/YOUR_HF_USERNAME/amazon-satellite-radar)** *(Replace with your actual Space link)*
+👉 **[Live Web Interface Link](https://huggingface.co/spaces/brkiii/amazon-satellite-radar)**
 
 ---
 
@@ -56,7 +56,7 @@ When evaluated on Out-of-Distribution (OOD) textbook remote sensing imagery outs
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/YOUR_GITHUB_USERNAME/amazon-satellite-swin-transformer.git](https://github.com/YOUR_GITHUB_USERNAME/amazon-satellite-swin-transformer.git)
+   git clone [https://github.com/YOUR_GITHUB_USERNAME/amazon-satellite-swin-transformer.git](https://github.com/brkiii/amazon-satellite-swin-transformer.git)
    cd amazon-satellite-swin-transformer
    ```
 
