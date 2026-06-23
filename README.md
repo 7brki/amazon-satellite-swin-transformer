@@ -11,7 +11,7 @@ An end-to-end multi-label remote sensing and spatial data science project design
 ## 🚀 Live Demo
 The trained model is deployed on Hugging Face Spaces with a clean Gradio web interface. You can upload any multi-spectral or standard RGB satellite crop to see the model infer in real-time.
 
-👉 **[Live Web Interface Link](https://huggingface.co/spaces/brkiii/amazon-satellite-radar)**
+👉 **[Live Web Interface Link](https://huggingface.co/spaces/YOUR_HF_USERNAME/amazon-satellite-radar)** *(Replace with your actual Space link)*
 
 ---
 
@@ -48,3 +48,29 @@ When evaluated on Out-of-Distribution (OOD) textbook remote sensing imagery outs
 ├── README.md             # Core project documentation
 └── notebooks/
     └── amazon_satellite_analysis.ipynb  # End-to-end training and optimization notebook
+```
+
+---
+
+## 📦 Installation & Local Usage
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/YOUR_GITHUB_USERNAME/amazon-satellite-swin-transformer.git](https://github.com/YOUR_GITHUB_USERNAME/amazon-satellite-swin-transformer.git)
+   cd amazon-satellite-swin-transformer
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the Gradio interface locally:
+   ```bash
+   python app.py
+   ```
+
+---
+
+## 🔬 Dataset Acknowledgements
+The dataset used is from the **"Planet: Understanding the Amazon from Space"** Kaggle competition. It contains high-resolution satellite imagery chips covering the Amazon basin, manually labeled by remote sensing experts into 17 co-occurring classes spanning atmospheric conditions, land cover, and land use types.
